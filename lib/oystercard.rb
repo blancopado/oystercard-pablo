@@ -6,12 +6,15 @@ class OysterCard
   MAX_BALANCE = 90
   MIN_FARE = 1
 
-  attr_reader :balance, :journey, :journeys
+  attr_reader :balance, :journey, :journeys, :journey_log
 
-  def initialize
+  def initialize(journey_log = JourneyLog.new)
     @balance = 0
-    @journey = nil
-    @journeys = []
+
+    @journey = nil #WILL HAVE TO DELETE
+    @journeys = [] #WILL HAVE TO DELETE
+
+    @journey_log = journey_log
   end
 
   def touch_in(station, journey_klass=Journey.new)

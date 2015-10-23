@@ -4,13 +4,8 @@ describe OysterCard do
 
   subject(:oystercard) { described_class.new }
 
-  # let(:entry_station) {double :entry_station, name: :old_street, zone: 1 }
-  # let(:exit_station) {double :exit_station, name: :baker_street, zone: 2 }
-
-  # let(:journey_entry) { double :journey_entry, entry_station: :old_street, pass_entry: entry_station, pass_exit: exit_station}
-  # let(:journey_exit) {double :journey_exit, entry_station: :old_street, pass_entry: entry_station, exit_station: :baker_street, pass_exit: exit_station}
-
   let(:journey) {double :journey, entry_station: :old_street, pass_entry: :old_street, exit_station: :baker_street, pass_exit: :baker_street}
+  let(:journey_log) {double :journey_log}
 
   let(:station) { double :station, name: :old_street, zone: 2}
 
@@ -27,6 +22,8 @@ describe OysterCard do
     it 'the list of journeys is empty' do
       expect(oystercard.journeys).to be_empty
     end
+
+
   end
 
   describe '#top_up' do

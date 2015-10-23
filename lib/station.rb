@@ -2,7 +2,7 @@ class Station
 
   attr_reader :name, :zone
 
-  STATIONS = {:old_street => 1, :baker_street => 2, :wimbledon => 3}
+  STATIONS = {:old_street => 1, :baker_street => 2, :wimbledon => 3, :euston => 2}
 
   def initialize (name)
     @name = name
